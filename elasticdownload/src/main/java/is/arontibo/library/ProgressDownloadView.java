@@ -1,9 +1,5 @@
 package is.arontibo.library;
 
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorSet;
-import com.nineoldandroids.animation.ObjectAnimator;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -18,6 +14,10 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
+
+import com.nineoldandroids.animation.Animator;
+import com.nineoldandroids.animation.AnimatorSet;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 /**
  * Created by thibaultguegan on 15/02/15.
@@ -64,12 +64,12 @@ public class ProgressDownloadView extends View {
         mPaintWhite = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintWhite.setStyle(Paint.Style.STROKE);
         mPaintWhite.setStrokeWidth(5 * mDensity);
-        mPaintWhite.setColor(Color.WHITE);
+        mPaintWhite.setColor(Color.GREEN);
         mPaintWhite.setStrokeCap(Paint.Cap.ROUND);
         //mPaintWhite.setPathEffect(new CornerPathEffect(5*mDensity));
 
         mPaintBubble = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaintBubble.setColor(Color.WHITE);
+        mPaintBubble.setColor(Color.GREEN);
         mPaintBubble.setStyle(Paint.Style.FILL);
 
         mPaintText = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -124,7 +124,7 @@ public class ProgressDownloadView extends View {
                     break;
                 case STATE_SUCCESS:
                     canvas.save();
-                    mPaintText.setColor(getResources().getColor(R.color.green_grass));
+                    mPaintText.setColor(getResources().getColor(R.color.white));
                     textX = Math.max(getPaddingLeft() - (int) (mBubbleWidth / 3.2f), mProgress * mWidth / 100 - (int) (mBubbleWidth / 3.2f));
                     Matrix flipMatrix = new Matrix();
                     flipMatrix.setScale(mFlipFactor, 1, bubbleAnchorX, bubbleAnchorY);
