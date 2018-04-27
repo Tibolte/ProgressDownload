@@ -2,6 +2,7 @@ package is.arontibo.library;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Parcelable;
 import android.util.AttributeSet;
